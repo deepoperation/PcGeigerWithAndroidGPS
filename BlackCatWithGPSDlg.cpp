@@ -129,6 +129,15 @@ BOOL CBlackCatWithGPSDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 小さいアイコンを設定
 	
 	// TODO: 特別な初期化を行う時はこの場所に追加してください。
+	CString addSpeedCombo[]	= {	"110", "300", "600", "1200", "2400", "4800", "9600",
+							"14400", "19200", "38400", "57600", "115200", "128000"};
+	// スピード一覧のコンボボックスに追加
+	CComboBox* fileList=(CComboBox*)GetDlgItem(IDC_BAUD_COMBO);
+	for(int i = 0; i < sizeof(addSpeedCombo)/sizeof(addSpeedCombo[0]) ; i++)
+	{
+		fileList->InsertString(-1,addSpeedCombo[i]);
+	}
+	fileList->SetCurSel(atoi(GetIniString(INI_SECTION_BASE, INI_ENTRY_BAUD, "11")));
 	m_DisplayLogLine = 0;
 	m_FileName = GetIniString(INI_SECTION_BASE, INI_ENTRY_LOGFILE, "C:\\GM10log.txt");
 	m_FileNameEdit.SetWindowText(m_FileName);
@@ -238,6 +247,10 @@ void CBlackCatWithGPSDlg::OnStartButton()
 	WritePrivateProfileString(INI_SECTION_BASE, INI_ENTRY_IPADDRESS, tempStr, GetCurDir());
 	m_FileNameEdit.GetWindowText(tempStr);
 	WritePrivateProfileString(INI_SECTION_BASE, INI_ENTRY_LOGFILE, tempStr, GetCurDir());
+	CComboBox* fileList=(CComboBox*)GetDlgItem(IDC_BAUD_COMBO);
+	int tempInt = fileList->GetCurSel();
+	tempStr.Format("%d", tempInt);
+	WritePrivateProfileString(INI_SECTION_BASE, INI_ENTRY_BAUD, tempStr, GetCurDir());
 	AfxBeginThread(GPSThread, this);
 	SetTimer(100, TIMER_INTERVAL, NULL);
 	m_StartButton.EnableWindow(FALSE);
@@ -321,7 +334,8 @@ BOOL CBlackCatWithGPSDlg::OpenComPort()
 		AfxMessageBox("ポート未入力", MB_OK);
 		return FALSE;
 	}
-	speed = "57600";
+	CComboBox* fileList=(CComboBox*)GetDlgItem(IDC_BAUD_COMBO);
+	fileList->GetWindowText(speed);
 
 	portNum		= atoi(port);
 	pTex		= (CHAR *)malloc(port.GetLength() + 1);

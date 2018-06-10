@@ -10,6 +10,7 @@
 #define	INI_ENTRY_IPADDRESS	"EntryIPAddress"
 #define	INI_ENTRY_LOGFILE	"EntryLogFile"
 #define	INI_ENTRY_PORT		"EntryPort"
+#define INI_ENTRY_BAUD		"EntryBaud"
 
 #define	INI_FILE_NAME		"BlackCatWithGps.ini"
 

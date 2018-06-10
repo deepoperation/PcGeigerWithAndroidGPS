@@ -7,7 +7,7 @@
 </h3>
 <h3>ｺﾏﾝﾄﾞ ﾗｲﾝ</h3>
 Creating command line "rc.exe /l 0x411 /fo"Release/BlackCatWithGPS.res" /d "NDEBUG" /d "_AFXDLL" "D:\Users\Takashi\Documents\BlackCatWithGPS\BlackCatWithGPS.rc"" 
-一時ﾌｧｲﾙ "C:\Users\Takashi\AppData\Local\Temp\RSP3133.tmp" を作成し、次の内容を記録します
+一時ﾌｧｲﾙ "C:\Users\Takashi\AppData\Local\Temp\RSP1D16.tmp" を作成し、次の内容を記録します
 [
 /nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/BlackCatWithGPS.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
 "D:\Users\Takashi\Documents\BlackCatWithGPS\AccessPort.cpp"
@@ -16,14 +16,14 @@ Creating command line "rc.exe /l 0x411 /fo"Release/BlackCatWithGPS.res" /d "NDEB
 "D:\Users\Takashi\Documents\BlackCatWithGPS\LibFunction.cpp"
 "D:\Users\Takashi\Documents\BlackCatWithGPS\LocalFile.cpp"
 ]
-Creating command line "cl.exe @C:\Users\Takashi\AppData\Local\Temp\RSP3133.tmp" 
-一時ﾌｧｲﾙ "C:\Users\Takashi\AppData\Local\Temp\RSP3144.tmp" を作成し、次の内容を記録します
+Creating command line "cl.exe @C:\Users\Takashi\AppData\Local\Temp\RSP1D16.tmp" 
+一時ﾌｧｲﾙ "C:\Users\Takashi\AppData\Local\Temp\RSP1D17.tmp" を作成し、次の内容を記録します
 [
 /nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/BlackCatWithGPS.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
 "D:\Users\Takashi\Documents\BlackCatWithGPS\StdAfx.cpp"
 ]
-Creating command line "cl.exe @C:\Users\Takashi\AppData\Local\Temp\RSP3144.tmp" 
-一時ﾌｧｲﾙ "C:\Users\Takashi\AppData\Local\Temp\RSP3145.tmp" を作成し、次の内容を記録します
+Creating command line "cl.exe @C:\Users\Takashi\AppData\Local\Temp\RSP1D17.tmp" 
+一時ﾌｧｲﾙ "C:\Users\Takashi\AppData\Local\Temp\RSP1D18.tmp" を作成し、次の内容を記録します
 [
 /nologo /subsystem:windows /incremental:no /pdb:"Release/BlackCatWithGPS.pdb" /machine:I386 /out:"Release/BlackCatWithGPS.exe" 
 .\Release\AccessPort.obj
@@ -34,7 +34,7 @@ Creating command line "cl.exe @C:\Users\Takashi\AppData\Local\Temp\RSP3144.tmp"
 .\Release\StdAfx.obj
 .\Release\BlackCatWithGPS.res
 ]
-ｺﾏﾝﾄﾞ ﾗｲﾝ "link.exe @C:\Users\Takashi\AppData\Local\Temp\RSP3145.tmp" の作成中
+ｺﾏﾝﾄﾞ ﾗｲﾝ "link.exe @C:\Users\Takashi\AppData\Local\Temp\RSP1D18.tmp" の作成中
 <h3>ｱｳﾄﾌﾟｯﾄ ｳｨﾝﾄﾞｳ</h3>
 ﾘｿｰｽをｺﾝﾊﾟｲﾙ中...
 ｺﾝﾊﾟｲﾙ中...
